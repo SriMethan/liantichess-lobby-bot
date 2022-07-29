@@ -26,7 +26,7 @@ ROLES = {
 intents = discord.Intents(messages=True, guilds=True)
 
 
-class MyBot(Bot):
+class MyBot(Bot, lobby_ws):
 
     async def on_message(self, msg):
         log.debug("---on_message() %s", msg)
